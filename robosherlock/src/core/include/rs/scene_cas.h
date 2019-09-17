@@ -90,7 +90,9 @@ public:
   {
     std::stringstream ss;
     ss << "cam"<<(cam_id==-1 ? std::to_string(active_cam_id_): std::to_string(cam_id))<<"."<< name;
-    return ss.str();
+    std::string s(name);
+    //To revise
+    return s;//ss.str();
   }
 
   template <class T>

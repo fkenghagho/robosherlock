@@ -94,7 +94,8 @@ public:
       std::string temp_str = *enableViews[i];
       if (temp_str.find(".") == std::string::npos)
         temp_str = "cam0." + temp_str;
-
+      //To revise
+      temp_str=temp_str.substr(temp_str.find(".") + 1);
       storage.enableViewStoring(temp_str, true);
       outInfo(i << " : " << temp_str);
     }
